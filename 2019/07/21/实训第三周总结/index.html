@@ -15,15 +15,22 @@
   </script>
 
   
-  <title>Archives | 北冥有鱼</title>
+  <title>实训第三周总结 | 北冥有鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="北冥有鱼">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="小程序开发总结css绝对定位/相对定位absolute/relative参考文章 ：http://www.divcss5.com/rumen/r403.shtml https://www.cnblogs.com/hjvsdr/p/7339638.html 相对定位：对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，相对于块级元素（或行内块）自身位置进行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实训第三周总结">
+<meta property="og:url" content="http://yoursite.com/2019/07/21/实训第三周总结/index.html">
 <meta property="og:site_name" content="北冥有鱼">
+<meta property="og:description" content="小程序开发总结css绝对定位/相对定位absolute/relative参考文章 ：http://www.divcss5.com/rumen/r403.shtml https://www.cnblogs.com/hjvsdr/p/7339638.html 相对定位：对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，相对于块级元素（或行内块）自身位置进行">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://pic1.win4000.com/wallpaper/2017-11-14/5a0ab4e957588.jpg">
+<meta property="og:image" content="file:///C:/Users/MIERFE~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png">
+<meta property="og:updated_time" content="2019-07-21T05:38:07.758Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="北冥有鱼">
+<meta name="twitter:title" content="实训第三周总结">
+<meta name="twitter:description" content="小程序开发总结css绝对定位/相对定位absolute/relative参考文章 ：http://www.divcss5.com/rumen/r403.shtml https://www.cnblogs.com/hjvsdr/p/7339638.html 相对定位：对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，相对于块级元素（或行内块）自身位置进行">
+<meta name="twitter:image" content="http://pic1.win4000.com/wallpaper/2017-11-14/5a0ab4e957588.jpg">
   
     <link rel="alternate" href="/atom.xml" title="北冥有鱼" type="application/atom+xml">
   
@@ -101,277 +108,145 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/07/21/实训第三周总结/">
-            <div class="full-height post-hover" style="
-                         background-image: url('http://pic1.win4000.com/wallpaper/2017-11-14/5a0ab4e957588.jpg');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            实训第三周总结
-                        </h1>
-                        <div>
-                        
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            
-小程序开发总结css绝对定位/相对定位absolute/relative参考文章 ：http://www.divcss5.com/rumen/r403.shtml
-https://www.cnblogs.com/hjvsdr/p/73..
-                        </p>
-                        <p class="date text-shadow">2019-07-21</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>实训第三周总结</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="https://s2.ax1x.com/2019/04/12/AqcJTH.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> mier</span>
+                <span class="post-date sub-title">at: 2019-07-21</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/07/14/实训第二周总结/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://s2.ax1x.com/2019/07/14/ZI7VY9.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                实训第二周总结
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-小程序开发总结解决scroll-view中flex布局失效参考文章 ：https://blog..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-14</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/05/01/VScode赛博朋克主题SynthWave-84安装设置/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://img.3dmgame.com/uploads/images/news/20180905/1536126769_903742.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                VScode赛博朋克主题SynthWave '84安装设置
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-效果预览
-安装步骤
-下载安装插件(下面2个插件都要安装)SynthWave ‘84.Custo..
-            </p>
-            <p class="date text-shadow is-marginless">2019-05-01</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/07/14/实训第二周总结/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://s2.ax1x.com/2019/07/14/ZI7VY9.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                实训第二周总结
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-小程序开发总结解决scroll-view中flex布局失效参考文章 ：https://blog..
-            </p>
-            <p class="date text-shadow is-marginless">2019-07-14</p>
-        </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/05/01/VScode赛博朋克主题SynthWave-84安装设置/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('https://img.3dmgame.com/uploads/images/news/20180905/1536126769_903742.jpg')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                VScode赛博朋克主题SynthWave '84安装设置
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-效果预览
-安装步骤
-下载安装插件(下面2个插件都要安装)SynthWave ‘84.Custo..
-            </p>
-            <p class="date text-shadow is-marginless">2019-05-01</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
+        <div class="content" style="overflow: auto">
+            <p><img src="http://pic1.win4000.com/wallpaper/2017-11-14/5a0ab4e957588.jpg" alt></p>
+<h1 id="小程序开发总结"><a href="#小程序开发总结" class="headerlink" title="小程序开发总结"></a>小程序开发总结</h1><h2 id="css绝对定位-相对定位absolute-relative"><a href="#css绝对定位-相对定位absolute-relative" class="headerlink" title="css绝对定位/相对定位absolute/relative"></a>css绝对定位/相对定位absolute/relative</h2><p><em>参考文章</em> ：<a href="http://www.divcss5.com/rumen/r403.shtml" target="_blank" rel="noopener">http://www.divcss5.com/rumen/r403.shtml</a></p>
+<p><a href="https://www.cnblogs.com/hjvsdr/p/7339638.html" target="_blank" rel="noopener">https://www.cnblogs.com/hjvsdr/p/7339638.html</a></p>
+<p><strong>相对定位：</strong>对象不可层叠，但将依据left，right，top，bottom等属性在正常文档流中偏移位置，相对于块级元素（或行内块）自身位置进行定位；</p>
+<p><strong>绝对定位：</strong>绝对定位的盒子是相对于离它最近的一个已定位的盒子进行定位的（默认是body）；</p>
+<h1 id="Mysql安装教程"><a href="#Mysql安装教程" class="headerlink" title="Mysql安装教程"></a>Mysql安装教程</h1><h2 id="centos6-10安装mysql5-7（yum方式）"><a href="#centos6-10安装mysql5-7（yum方式）" class="headerlink" title="centos6.10安装mysql5.7（yum方式）"></a>centos6.10安装mysql5.7（yum方式）</h2><p><em>参考文章</em> ：<a href="https://www.cnblogs.com/gandoufu/p/9665930.html" target="_blank" rel="noopener">https://www.cnblogs.com/gandoufu/p/9665930.html</a></p>
+<h2 id="centos6-5配置允许远程连接mysql"><a href="#centos6-5配置允许远程连接mysql" class="headerlink" title="centos6.5配置允许远程连接mysql"></a>centos6.5配置允许远程连接mysql</h2><p><em>参考文章</em> ：<a href="https://blog.csdn.net/zzh_meng520/article/details/79354919" target="_blank" rel="noopener">https://blog.csdn.net/zzh_meng520/article/details/79354919</a></p>
+<h2 id="win10安装mysql5-7"><a href="#win10安装mysql5-7" class="headerlink" title="win10安装mysql5.7"></a>win10安装mysql5.7</h2><p><em>参考文章</em> ：<a href="https://www.cnblogs.com/xiaxiaoxu/p/8977418.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaxiaoxu/p/8977418.html</a></p>
+<h2 id="win10同时安装两个版本的mysql"><a href="#win10同时安装两个版本的mysql" class="headerlink" title="win10同时安装两个版本的mysql"></a>win10同时安装两个版本的mysql</h2><p><em>参考文章</em> ：<a href="https://blog.csdn.net/wudinaniya/article/details/82455431" target="_blank" rel="noopener">https://blog.csdn.net/wudinaniya/article/details/82455431</a></p>
+<ol>
+<li><p>解压后新建my.ini 设置端口为3307</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"></span><br><span class="line">port = 3307</span><br><span class="line"></span><br><span class="line">basedir=D:\MySQL\MySQL Server 5.7.22</span><br><span class="line"></span><br><span class="line">datadir=D:\MySQL\MySQL Server 5.7.22\data</span><br><span class="line"></span><br><span class="line">max_connections=200</span><br><span class="line"></span><br><span class="line">character-set-server=utf8</span><br><span class="line"></span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"></span><br><span class="line">sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES</span><br><span class="line"></span><br><span class="line">[mysql]</span><br><span class="line"></span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以管理员身份运行cmd进入bin目录</p>
+</li>
+<li><p>安装mysql服务并指定服务名为mysql2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld install mysql2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld –initialize</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开注册表，找到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\mysql2,修改ImagePath参数，更正mysql2服务相关路径。(C:\mysql-5.7.22-win64\bin\mysqld mysql2)</p>
+<p><img src="file:///C:/Users/MIERFE~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png" alt="https://img-blog.csdn.net/20180906123251475?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3d1ZGluYW5peWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+</li>
+<li><p>启动服务 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置root账户密码 </p>
+<p>在my.ini文件（MySQL的配置文件）的[mysqld]下加一行skip-grant-tables</p>
+</li>
+<li><p>重启mysql服务</p>
+</li>
+<li><p>登录mysql </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p -P3307</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改密码 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">update mysql.user set authentication_string=password(&quot;root&quot;) where user=&quot;root&quot;; </span><br><span class="line">flush privileges;（刷新账户信息） </span><br><span class="line">quit;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将my.ini文件中刚才加的skip-grant-tables这一行删掉，保存后再重启MySQL服务</p>
+</li>
+</ol>
 
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/07/14/实训第二周总结/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('https://s2.ax1x.com/2019/07/14/ZI7VY9.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>实训第二周总结</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-小程序开发总结解决scroll-view中flex布局失效参考文章 ：https://blog.csdn.net/Abudula__/article/details/86667922
-在scrollview里设置一个view应用flex布局
-scollview子容器高度应高于scoll高度才能有滚动效果
-必须在scollview控件上设置scroll-..
-                                        </p>
-                                        <p>2019-07-14</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/05/01/VScode赛博朋克主题SynthWave-84安装设置/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('https://img.3dmgame.com/uploads/images/news/20180905/1536126769_903742.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>VScode赛博朋克主题SynthWave &#39;84安装设置</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-效果预览
-安装步骤
-下载安装插件(下面2个插件都要安装)SynthWave ‘84.Custom CSS and JS Loader.
+        </div>
+        <div class="post-reply">
+            
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
 
-修改 settings.json
- 123"vscode_custom_css.imports":["file:///C:/users/MyUsersName/synthwave84.css"],"vscode_cu..
-                                        </p>
-                                        <p>2019-05-01</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/04/12/侠客/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile" style="margin: 10px; background-size: cover;background-image: url('https://s2.ax1x.com/2019/05/01/EJJyi6.jpg')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>侠客</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-前言这是我在博客上写的第一篇文章，说来惭愧，距离创建个人博客已经过去一年多了。此时在写这篇博客的我有着对未来无限的期待的心情。就像那天练车回来，走在回宿舍的路上，下着小雨，耳机里放着和此时心跳频率相同的乐曲，身体不自觉的想象米津玄师在loserMV里那样扭动，心里想着教练车前座那个黑框眼镜女孩的我，还好没路人经过，不然可能会带着惊恐的目光看一个身体不规..
-                                        </p>
-                                        <p>2019-04-12</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+            
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
